@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 const Complaintsschema = new mongoose.Schema({
   studentId: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
     required: true,
   },
   message: {
