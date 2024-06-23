@@ -13,7 +13,7 @@ export const addComplaints = async (req, res) => {
 export const getComplaints = async (req, res) => {
   try {
     const complaints = await Complaint.find();
-    res.status(200).json({ status: 'success', complaints });
+    res.status(200).json({ status: 'success', data:complaints });
   } catch (err) {
     return res.status(500).json({ status: "error", message: err.message });
   }
